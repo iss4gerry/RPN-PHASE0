@@ -22,14 +22,18 @@
 let nama = "Gerry", peran = "Penyihir";
 
 //code disini gunakan console.log untuk outputnya
-
-
-if(peran == 'Ksatria'){
-    console.log(`halo Ksatria ${nama} , kamu dapat menyerang dengan senjatamu!`);
-}else if(peran == 'Tabib'){
-    console.log(`halo Tabib ${nama} , kamu akan membantu temanmu yang terluka`);
-}else if(peran == 'Penyihir'){
-    console.log(`halo Penyihir ${nama} , ciptakan keajaiban yang membantu kemenanganmu!`);
+if(nama === ''){
+    console.log('Nama wajib diisi')
+}else if(peran == ''){
+    console.log('Pilih Peranmu untuk memulai game')
 }else{
-    console.log('tapi tanpa backtick juga ga masalah sih yg penting output sesuai');
+    if(peran == 'Ksatria'){
+        console.log(`halo Ksatria ${nama} , kamu dapat menyerang dengan senjatamu!`);
+    }else if(peran == 'Tabib'){
+        console.log(`halo Tabib ${nama} , kamu akan membantu temanmu yang terluka`);
+    }else if(peran == 'Penyihir'){
+        console.log(`halo Penyihir ${nama} , ciptakan keajaiban yang membantu kemenanganmu!`);
+    }else{
+        console.log('tapi tanpa backtick juga ga masalah sih yg penting output sesuai');
+    }
 }
