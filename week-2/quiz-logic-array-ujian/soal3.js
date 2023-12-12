@@ -6,35 +6,23 @@ fungsi ini akan me-return array 2 dimensi
 
 
 function groupAnimals(animals) {
-    let hasilA = [];
-    let hasilB = [];
-    let hasilC = [];
-    let hasilD = [];
-    let hasil = [];
-  for(let i = 0;i<animals.length;i++){
-    if(animals[i][0] === 'a'){
-        hasilA.push(animals[i]);
-    }if(animals[i][0] === 'c'){
-        hasilB.push(animals[i]);
-    }if(animals[i][0] === 'k'){
-        hasilC.push(animals[i]);
-    }
-    if(animals[i][0] === 'u'){
-        hasilD.push(animals[i]);
+  let hasil = [];
+  let hurufAwal = [];
+
+  for (let i = 0; i < animals.length; i++) {
+    if (!hurufAwal.includes(animals[i][0])) {
+      hurufAwal.push(animals[i][0]);
+      hasil.push([animals[i]]);
+    } else {
+      let index = hurufAwal.indexOf(animals[i][0]);
+      hasil[index].push(animals[i]);
     }
   }
 
- 
-
-  hasil.push(hasilA, hasilB, hasilC)
-  if(hasilD.length > 0){
-    hasil.push(hasilD);
-  }
   return hasil;
 }
-
 // TEST CASES
 console.log(groupAnimals(['cacing', 'ayam', 'kuda', 'anoa', 'kancil']));
 // [ ['ayam', 'anoa'], ['cacing'], ['kuda', 'kancil'] ]
-console.log(groupAnimals(['cacing', 'ayam', 'kuda', 'anoa', 'kancil', 'unta', 'cicak' ]));
+console.log(groupAnimals(['cacing', 'ayam', 'kuda', 'anoa', 'kancil', 'unta', 'cicak', ]));
 // [ ['ayam', 'anoa'], ['cacing', 'cicak'], ['kuda', 'kancil'], ['unta'] ]
