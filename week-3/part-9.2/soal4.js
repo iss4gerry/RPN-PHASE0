@@ -4,7 +4,7 @@ Diberikan sebuah function cariModus(arr) yang menerima sebuah array angka. Funct
 function cariModus(arr) {
 
     let arrModus = []
-    b = false;
+    let b;
   
     for (let i = 0; i < arr.length; i++) {
       for (let j = i + 1; j < arr.length; j++) {
