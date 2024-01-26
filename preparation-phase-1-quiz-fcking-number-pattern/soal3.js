@@ -28,7 +28,6 @@ function initialObjectGrouping(studentsArr) {
         let firstLetter = studentsArr[i][0]
         if(!groupWord[firstLetter]){
             groupWord[firstLetter] = []
-            console.log('ini ' + groupWord[firstLetter])
         }
 
         groupWord[firstLetter].push(studentsArr[i])
