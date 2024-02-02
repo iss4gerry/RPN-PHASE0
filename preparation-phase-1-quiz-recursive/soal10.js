@@ -16,12 +16,12 @@ Wajib menggunakan metode rekursif
 Dilarang menggunakan sintaks for / while dan regex
 */
 function numberIterator(num) {
-    //code here
-    if(num === 0){
-        return '0'
+    //code 
+    if(num < 1){
+        return 0
     }
-    
-    return numberIterator(num - 1) + num
+
+    return numberIterator(num - 1) + String(num) 
   }
   console.log(numberIterator(5)); // '012345'
   console.log(numberIterator(7)); // '01234567'
